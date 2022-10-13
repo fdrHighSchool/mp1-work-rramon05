@@ -1,4 +1,4 @@
-import java.util.Scanner;
+ import java.util.Scanner;
 public class UserName {
   public static void main(String[] args) {
     // create Scanner object
@@ -7,11 +7,24 @@ public class UserName {
     // get String input from user
     System.out.print("Enter your first name: ");
     String firstName = s.nextLine();
+    firstName = firstName.toLowerCase();
     System.out.print("Enter your last name: ");
     String lastName = s.nextLine();
-
+    lastName = lastName.toLowerCase();
+    System.out.print("What is your favorite number? ");
+    int favNum = s.nextInt();
+    System.out.print("Enter Student or Teacher: ");
+    String role = s.nextLine();
+    role = role.toLowerCase();
+    if (role.equals("teacher")){
+        System.out.println("Your new DOE username is "+ getInitial(firstName) + lastName + favNum + "@schools.nyc.gov");
+    }
+    else{
+       System.out.println("Your new DOE username is " + firstName + getInitial(lastName) + favNum + "@nycstudents.net"); 
+    }
     // test output
-    System.out.println("Hello " + initialize(firstName) + "." + initialize(lastName) + ".");
+    
+    
 
     s.close();
   } // end main method
@@ -22,7 +35,7 @@ public class UserName {
    * Input: a name (String)
    * Return: a single character (String)
    */
-  public static String initialize(String n) {
+  public static String getInitial(String n) {
     return n.substring(0, 1);
   } // end initialize method
 
