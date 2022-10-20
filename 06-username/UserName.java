@@ -18,6 +18,7 @@ public class UserName {
         role = role.toLowerCase();
         
         
+
         System.out.print("What is your favorite number? ");
         int favNum = s.nextInt();
 
