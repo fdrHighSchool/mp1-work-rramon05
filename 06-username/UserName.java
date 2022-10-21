@@ -3,7 +3,7 @@ public class UserName {
     public static void main(String[] args) {
         // create Scanner object
         Scanner s = new Scanner(System.in);
-        
+        /*
         // get String input from user
         System.out.print("Enter your first name: ");
         String firstName = s.nextLine();
@@ -31,6 +31,7 @@ public class UserName {
         else{
            System.out.println("Your new DOE username is " + firstName + getInitial(lastName) + favNum + "@nycstudents.net"); 
         }
+        */
         // test output
         generatePassword(8);
         
